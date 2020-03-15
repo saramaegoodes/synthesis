@@ -49,9 +49,11 @@ let digits x =
 
     //failwith "Not implemented"
 
-let minmax _ =
+let minmax (num1, num2, num3, num4) = 
+    
+    (min(min num1 num2) (min num3 num4), max (max num1 num2) (max num3 num4))
 
-    failwith "Not implemented"
+    //failwith "Not implemented"
 
 let isLeap a =
     match a >= 1582  with
@@ -79,33 +81,7 @@ let toBinary a =
     match a >= 0 with
     |true -> intobin a "" 
     |false -> failwith "shouldFail"
-    
-    //let days a =
-    //    match a with
-     //   |0 -> "0"
-    //    |   _ -> "1"
-     //   |b -> intotobin a
 
-    //|b -> 
-
-
-    //let other a =
-     //   match a with 
-     //   |0 -> "0"
-     //   |1 -> "1"
-   // match (a<>0) && (a<>1) with
-   // |true -> intotobin a 
-   // |false -> other a
-    ///|0 -> "0"
-    //|1 -> "1"
-    
-    //let rec inttobin a = a%2 + 10 * (inttobin(a/2))
-    
-        //match i with
-        //|0 -> "0"
-       // |1 -> "1"
-       // |_ -> let bit = string (i%2)
-        //       (inttobin (i/2)) + bit
 
     //failwith "Not implemented"
 
