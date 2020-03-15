@@ -72,12 +72,13 @@ let month a =
     //failwith "Not implemented"
 
 let toBinary a =
-    let rec intotobin a =
-        match a with 
-        |b -> (a % 2 + 10 * (intotobin(a/2)))
-    match a>=0 with
-    |true -> match a with |0 -> "0" |1 -> "1" |b -> '"' + b + '"'
-    |false -> failwith "freh"
+    let rec intobin a inc=
+        match a with
+        |1|0 -> string(a) + inc
+        |b -> intobin (a / 2) (string(a % 2) + inc)
+    match a >= 0 with
+    |true -> intobin a "" 
+    |false -> failwith "shouldFail"
     
     //let days a =
     //    match a with
